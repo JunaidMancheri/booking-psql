@@ -12,8 +12,8 @@ const Passenger = getPassengerModel(sequelize);
 const Booking = getBookingModel(sequelize);
 
 
-Passenger.belongsTo(Booking, {foreignKey: 'booking_id'});
-Booking.hasMany(Passenger, {foreignKey: 'booking_id'})
+Passenger.belongsTo(Booking, {foreignKey: 'bookingId'});
+Booking.hasMany(Passenger, {foreignKey: 'bookingId'})
 
 
 export default async function connectDB() {
@@ -21,3 +21,5 @@ export default async function connectDB() {
     await sequelize.sync();
     console.log('DB Connected');
 }
+
+export {Passenger, Booking};

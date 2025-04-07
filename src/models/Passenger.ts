@@ -7,7 +7,7 @@ export default function getPassengerModel(sequelize: Sequelize) {
          type: DataTypes.STRING,
             allowNull: false, 
         },
-        booking_id: {
+        bookingId: {
             type: DataTypes.INTEGER,
             references: {
                 key: 'id',
