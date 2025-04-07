@@ -1,3 +1,7 @@
+/**
+ * Run this script to add dummy data to the db;
+ */
+
 import connectDB, { Booking, Passenger } from "./src/db.connection";
 
 async function execute() {
