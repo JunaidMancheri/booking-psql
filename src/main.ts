@@ -1,11 +1,15 @@
+import { json } from "sequelize";
 import connectDB from "./db.connection";
+import bookingRouter from "./routes/booking";
 
-const express = require('express');
+import express from 'express';
 
 const app = express();
 
+app.use(express.urlencoded({extended: true}));
+app.use(express.json());
 
-
+app.use('/bookings', bookingRouter);
 
 async function start() {
     await connectDB();
